@@ -61,7 +61,7 @@ df['Repeat'] = df_calc.sum(axis=1)
 df.index = df.index + 2
 
 fig, (ax1, ax2) = plt.subplots(2)
-fig.suptitle('Likelyhood or repeating Birthdays')
+fig.suptitle('Likelyhood of repeating Birthdays')
 
 ax1.plot(df)
 ax2.plot(df)
