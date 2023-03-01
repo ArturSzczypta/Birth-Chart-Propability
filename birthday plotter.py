@@ -1,5 +1,8 @@
-import numpy as np 
+'''
+Calculates how likely it is, to have multiple people with the same birthday in the same group
+'''
 import csv
+import numpy as np 
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -40,7 +43,6 @@ names = range(2,len(df.columns)+2)
 df.columns = names
 print(df.columns)
 
-
 #https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.divide.html
 #df_new = df[3].div(2/3)
 
@@ -53,8 +55,6 @@ for i in names:
 
 #Adding calculation of likeliness of two people haveing the same birthday
 df['Repeat'] = df_calc.sum(axis=1)
-
-
 
 #https://stackoverflow.com/a/32249984/5531122
 #change index to be in line with population
@@ -71,9 +71,6 @@ ax2.legend(df)
 ax1.set_ylabel('Population')
 ax2.set_xlabel('Frequency')
 ax2.set_ylabel('Population')
-
-
-
 plt.show()
 
 
